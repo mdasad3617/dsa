@@ -1,0 +1,19 @@
+function secondLargest(arr){
+  let a = -Infinity
+  let b = -Infinity;
+  for (var i = 0; i < arr.length; i++) {
+    if (b<arr[i]) {
+      a=b;
+      b=arr[i]
+    }else if (a<b && a<arr[i]) {
+      a= arr[i]
+    }
+    
+  }
+  return  a;
+}
+
+let arr=  [15, 22, 8, 31, 27];
+
+
+console.log(secondLargest(arr))
