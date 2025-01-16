@@ -1,6 +1,10 @@
 function secondLargest(arr){
+  if (arr.length < 2)
+    return -1;
+
   let a = -Infinity
   let b = -Infinity;
+
   for (var i = 0; i < arr.length; i++) {
     if (b<arr[i]) {
       a=b;
@@ -8,7 +12,6 @@ function secondLargest(arr){
     }else if (a<b && a<arr[i]) {
       a= arr[i]
     }
-    
   }
   return  a;
 }
