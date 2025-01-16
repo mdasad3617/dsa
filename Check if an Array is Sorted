@@ -1,1 +1,33 @@
+function isSorted(arr){
+    if (arr.length < 2)
+    return -1;
+    
+  let a = -Infinity
+  let len = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]>a) {
+      a= arr[i]
+      len++
+    }
+  }
+  if (len == arr.length) 
+    return true
+  else 
+    return false
+}
 
+let arr = [1, 2, 3, 4, 5];
+
+
+
+console.log(isSorted(arr))
+
+
+
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[i - 1])
+      return false;
+  }
+
+  return true;
