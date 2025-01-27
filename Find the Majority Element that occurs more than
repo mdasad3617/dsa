@@ -1,0 +1,35 @@
+// Find the Majority Element that occurs more than N/2 times
+
+// // Input Format
+// // : N = 3, nums[] = {3,2,3}
+// // Result
+// // : 3
+// // Explanation
+
+
+
+
+
+function MajorEle(arr) {
+  let major = -Infinity;
+  let count = 0;
+  let lastCount=0;
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      if (arr[i]==arr[j]) {
+        count++;
+      }
+      if (lastCount < count) {
+        lastCount = count;
+        major = arr[i];
+      }    
+    }
+    count = 0;
+  }
+  return major;
+}
+
+
+
+let nums=[9,8,9,7,6,9,6,6,2,0,6,9]
+console.log(MajorEle(nums));
